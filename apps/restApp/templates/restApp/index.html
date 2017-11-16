@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rest User</title>
+</head>
+<body>
+<h1>Users</h1>
+
+{% for id in User %}
+<p>{{id.name}} , {{id.email}} , {{id.updated_at}} <a href ="/edit/{{id.id}}">Edit</a> <a href="/delete/{{id.id}}">Delete</a> <a href="/show/{{id.id}}">Show</a> </p>
+{% endfor %}
+
+<a href="/create">Create new User</a>
+</body>
+</html>

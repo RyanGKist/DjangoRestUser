@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+</head>
+<body>
+	<form action = '/edit/user/{{User.id}}' method='POST'>
+	{% csrf_token %}
+	Name:<input type="text" name="name" value="{{User.name}}">
+	Email:<input type="text" name="email" value="{{User.email}}">
+	<input type="submit" name="create_user">
+
+</body>
+</html>
